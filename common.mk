@@ -19,11 +19,7 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-havoc
-
-PRODUCT_ENFORCE_RRO_TARGETS := *
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-havoc/packages/apps/Snap
+    $(LOCAL_PATH)/overlay-derp
 
 # A/B
 AB_OTA_UPDATER := true
@@ -87,7 +83,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
-    vendor/havoc/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+    $(LOCAL_PATH)/configs/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 
 # Permissions
@@ -123,7 +119,7 @@ PRODUCT_PACKAGES += \
 
 # Havoc Device Settings
  PRODUCT_PACKAGES += \
-   DeviceSettings
+#   DeviceSettings
 
 # Atrace
 PRODUCT_PACKAGES += \
@@ -407,8 +403,8 @@ PRODUCT_PACKAGES += \
 
 # Prebuilts
 PRODUCT_PACKAGES += \
-    OnePlusCamera \
-    OnePlusCameraService 
+#    OnePlusCamera \
+#    OnePlusCameraService 
 #    OnePlusGallery
 
 # QMI
@@ -455,6 +451,11 @@ PRODUCT_COPY_FILES += \
 # Servicetracker
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.0.vendor
+
+# spectrum
+PRODUCT_PACKAGES += \
+    init.spectrum.rc \
+    init.spectrum.sh
 
 # Remove unwanted packages
 PRODUCT_PACKAGES += \

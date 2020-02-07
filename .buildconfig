@@ -1,0 +1,10 @@
+[default]
+name=Default
+runtime=host
+config-opts=
+run-opts=
+prefix=/home/abuzar/.cache/gnome-builder/install/fod/host
+app-id=
+postbuild=
+prebuild=
+default=true
