@@ -27,7 +27,7 @@ import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceGroup;
 
-import com.android.internal.util.potato.FileUtils;
+import com.android.internal.util.bootleggers.FileUtils;
 import com.potato.settings.slider_settings.utils.Constants;
 
 public class ButtonSettingsFragment extends PreferenceFragment
